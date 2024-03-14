@@ -11,3 +11,5 @@ Por este motivo, conocer toda la informacion de la playa antes incluso de haberl
 
 ## ¿Por qué?
 Porque no existe ninguna otra app que tenga la misma funcionalidad y en la que nos podamos apoyar.
+
+Figma del proyecto https://www.figma.com/file/aQ4gVAavxKeN7Q0vsoiVHR/Untitled?type=design&node-id=0%3A1&mode=design&t=ztDKt5aGq7N1uP2n-1 
