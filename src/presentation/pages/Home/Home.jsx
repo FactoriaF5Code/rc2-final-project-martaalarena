@@ -1,4 +1,5 @@
 import Header from "../../components/header/Header";
+import PageContainer from "../../components/pageContainer/PageContainer";
 import Slider from "../../components/slider/Slider";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
     <Header/>
     <Slider/>
+    <PageContainer/>
     </>
   )
 }

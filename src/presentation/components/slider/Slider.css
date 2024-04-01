@@ -5,8 +5,14 @@
 
 .carousel {
   position: relative;
-  top: -6rem;
+  margin: -100;
   z-index: -1;
+}
+
+.carousel_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel p {
@@ -15,7 +21,4 @@
   left: 6rem;
   font-family: graphik;
   /* font-size: 4rem; */
-
 }
-
-
