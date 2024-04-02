@@ -41,4 +41,10 @@
   list-style: none;
   font-family: graphik;
   color: #fff;
+
+}
+
+.container__list ul li a {
+  color: inherit;
+  text-decoration: none; 
 }

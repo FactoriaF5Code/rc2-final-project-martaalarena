@@ -6,7 +6,7 @@
 .allContainers {
   background-color: #627c85;
   position: relative;
-  z-index: -1;
+  /* z-index: -1; */
   display: flex;
   justify-content: center;
   gap: 4rem;
@@ -55,4 +55,10 @@
   align-items: center;
   position: absolute;
   gap: 10px;
+}
+
+
+.containerPage button a {
+  color: inherit;
+  text-decoration: none; 
 }

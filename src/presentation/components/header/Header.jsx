@@ -13,8 +13,8 @@ export default function Header() {
         </section>
         <section className="container__list">
           <ul>
-            <Link to={"/"}>Home</Link>
-            <Link to={"/searchBeach"}>Review</Link>
+            <li><Link to={"/"}>HOME</Link></li>
+            <li><Link to={"/searchBeach"}>REVIEWS</Link></li>
             <li>SURF FORECAST</li>
             <li>MY REVIEWS</li>
           </ul>
