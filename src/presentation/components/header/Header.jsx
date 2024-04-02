@@ -1,6 +1,7 @@
 import logo from "../../assets/rip_current_logo.png";
 import textLogo from "../../assets/RIP CURRENT.png";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -12,8 +13,8 @@ export default function Header() {
         </section>
         <section className="container__list">
           <ul>
-            <li>HOME</li>
-            <li>REVIEWS</li>
+            <Link to={"/"}>Home</Link>
+            <Link to={"/searchBeach"}>Review</Link>
             <li>SURF FORECAST</li>
             <li>MY REVIEWS</li>
           </ul>
