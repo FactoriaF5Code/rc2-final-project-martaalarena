@@ -1,7 +1,25 @@
+import { useState } from "react";
 
+// eslint-disable-next-line react/prop-types
+export default function BeachSearcher({ onSearch }) {
+  const [search, setSearch] = useState("");
 
-export default function BeachSearcher() {
+  const handleSearchInput = (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    setSearch(searchTerm);
+    onSearch(searchTerm);
+  };
   return (
-    <div>BeachSearcher</div>
-  )
+    <>
+      <article>
+        <input
+          className="buscador"
+          type="text"
+          value={search}
+          onChange={handleSearchInput}
+          placeholder="Buscar..."
+        />
+      </article>
+    </>
+  );
 }
