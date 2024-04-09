@@ -35,6 +35,7 @@ export const DataProvider = ({ children }) => {
     postReview,
     viewReview,
     reviewList
+   
   };
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;

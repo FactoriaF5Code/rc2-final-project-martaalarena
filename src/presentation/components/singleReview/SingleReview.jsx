@@ -6,6 +6,8 @@ export default function SingleReview() {
   
   const { reviewList } = useDataContext();
 
+  console.log("Datos de reviewList:", reviewList);
+
   return (
     <section className="totalContainer">
       {reviewList.map((review) => (
