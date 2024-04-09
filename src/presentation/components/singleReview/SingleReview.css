@@ -1,0 +1,10 @@
+.totalContainer {
+    margin-top: 7rem;
+   
+   height: 100vh;
+}
+
+.containerImgName img{
+width: 20px;
+height: 40px;
+}

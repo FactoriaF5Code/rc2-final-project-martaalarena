@@ -14,7 +14,7 @@ export default function Header() {
         <section className="container__list">
           <ul>
             <li><Link to={"/"}>HOME</Link></li>
-            <li><Link to={"/searchBeach"}>REVIEWS</Link></li>
+            <li><Link to={"/review"}>REVIEWS</Link></li>
             <li>SURF FORECAST</li>
             <li>MY REVIEWS</li>
           </ul>
