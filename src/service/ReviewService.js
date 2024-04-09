@@ -1,25 +1,30 @@
-import { useState, useEffect } from "react";
+import axios from "axios"
 
-export function useReviewService() {
-  const url = "http://localhost:8080/api/review";
-  const [data, setData] = useState(null);
-  const [needsReload, setNeedsReload] = useState(true);
 
-  useEffect(() => {
-    if(needsReload){
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) =>{
-        setData(data);
-        setNeedsReload(false);
-    });
+const URL = "http://localhost:8080/api/review";
+
+
+class ReviewService{
+  async createReview(formData) {
+    try {
+      const response = await axios.post(`${URL}`, formData);
+      return response.data;
+    } catch (error) {
+      console.error("Error creando reseña", error.response);
+      throw error;
     }
-}, [needsReload]);
-      
-  
-  return { data, url, setNeedsReload};
+  }
+
+  async viewReview() {
+    try {
+      const response = await axios.get(`${URL}`);
+      return response.data;
+    } catch (error) {
+      console.error("No se pueden cargar la lista de reseñas", error.response);
+      throw error;
+    }
+  }
+
 }
 
-export function ReviewService() {
-    return useReviewService();
-}
+export default ReviewService;
