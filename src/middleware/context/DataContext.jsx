@@ -36,7 +36,6 @@ export const DataProvider = ({ children }) => {
     review,
     setReview,
     postReview,
-
     reviewList,
   };
 

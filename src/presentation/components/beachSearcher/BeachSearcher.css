@@ -1,0 +1,22 @@
+.searcherContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.searcherContainer input {
+  width: 70rem;
+  height: 7rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+  background-color: rgba(217, 217, 217, 0.3);
+  color: #fff;
+  padding: 1rem;
+}
+
+.searcherContainer input::placeholder {
+  opacity: 1;
+}
+
+.searcherContainer img{
+    width: fit-content;
+}

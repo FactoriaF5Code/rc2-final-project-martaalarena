@@ -1,6 +1,7 @@
 import { useState } from "react";
+import searchIcon from "../../assets/Search.png";
+import "./BeachSearcher.css";
 
-// eslint-disable-next-line react/prop-types
 export default function BeachSearcher({ onSearch }) {
   const [search, setSearch] = useState("");
 
@@ -11,7 +12,7 @@ export default function BeachSearcher({ onSearch }) {
   };
   return (
     <>
-      <article>
+      <article className="searcherContainer">
         <input
           className="buscador"
           type="text"
@@ -19,6 +20,7 @@ export default function BeachSearcher({ onSearch }) {
           onChange={handleSearchInput}
           placeholder="Buscar..."
         />
+        <img src={searchIcon} alt="lupa" />
       </article>
     </>
   );
