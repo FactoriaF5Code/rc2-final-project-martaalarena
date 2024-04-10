@@ -2,6 +2,7 @@ import { useState } from "react";
 import searchIcon from "../../assets/Search.png";
 import "./BeachSearcher.css";
 
+// eslint-disable-next-line react/prop-types
 export default function BeachSearcher({ onSearch }) {
   const [search, setSearch] = useState("");
 

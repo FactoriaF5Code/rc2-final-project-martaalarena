@@ -15,13 +15,16 @@
 
 .imgReviewList {
   display: flex;
+  justify-content: space-around;
   gap: 3rem;
+  
+  padding: 3rem;
 }
 
 .imgReviewList div {
     display: flex;
     flex-direction: column;
-    gap: 8rem;
+    gap:6rem;
   align-items:center ;
 }
 

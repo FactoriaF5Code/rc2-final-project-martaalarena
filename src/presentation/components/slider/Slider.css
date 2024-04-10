@@ -4,41 +4,30 @@
 }
 .sliderContainer {
   width: 100%;
-  height: 60rem;
+  height: 100vh;
 }
 
 .sliderTitle {
   position: absolute;
-  font-size: 3rem;
-  top: 23rem;
-  left: 45rem;
+  font-size: 3vw;
   z-index: 62;
   text-align: center;
   color: rgba(34, 34, 34, 0.9);
   font-family: "graphik";
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-  color: #f3d743 !important;
-}
-
-/* .carousel {
-  position: relative;
-  margin: -100;
-  z-index: -1;
-}
-
-.carousel_section {
+.relative {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.carousel p {
-  position: absolute;
-  bottom: 6rem;
-  left: 6rem;
-  font-family: graphik;
-  /* font-size: 4rem; */
-/* } */ 
+.relative img {
+  width: 100%;
+  height: 100vh;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #f3d743 !important;
+}

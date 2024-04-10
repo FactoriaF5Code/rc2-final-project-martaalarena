@@ -19,22 +19,13 @@ export default function Slider() {
           className="sliderContainer"
         >
           <SwiperSlide>
-            <img
-              src={portadaSlider}
-              alt="Playa de San Juan de la Arena"
-            />
+            <img src={portadaSlider} alt="Playa de San Juan de la Arena" />
           </SwiperSlide>
           <SwiperSlide>
-            <img
-              src={secondSlider}
-              alt="Playa de San Juan de la Arena"
-            />
+            <img src={secondSlider} alt="Playa de San Juan de la Arena" />
           </SwiperSlide>
           <SwiperSlide>
-            <img
-              src={thirdSlider}
-              alt="Playa de San Juan de la Arena"
-            />
+            <img src={thirdSlider} alt="Playa de San Juan de la Arena" />
           </SwiperSlide>
         </Swiper>
         <h1 className="sliderTitle">
@@ -43,25 +34,6 @@ export default function Slider() {
           <br /> PLAYAS ASTURIANAS
         </h1>
       </div>
-      {/* <Carousel className="carousel" data-bs-theme="dark">
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={portadaSlider}
-            alt="First slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={secondSlider}
-            alt="Second slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="d-block w-100" src={thirdSlider} alt="Third slide" />
-        </Carousel.Item>
-      </Carousel> */}
     </>
   );
 }
