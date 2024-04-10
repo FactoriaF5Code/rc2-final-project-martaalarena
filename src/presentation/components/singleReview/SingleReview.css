@@ -1,10 +1,68 @@
 .totalContainer {
-    margin-top: 7rem;
-   
-   height: 100vh;
+  height: max-content;
+  max-height: max-content;
+  min-height: 100vh;
+  background-color: #627c85;
+}
+.totalContainerInfo {
+  padding: 11rem 5rem;
 }
 
-.containerImgName img{
-width: 20px;
-height: 40px;
+.containerImgName {
+  display: flex;
+  gap: 3rem;
+}
+
+.containerImgName img {
+  max-width: 30rem;
+  border-radius: 1.5rem;
+}
+
+.containerImgName h1 {
+  text-transform: uppercase;
+  color: #fff;
+}
+.progressBarContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.progressBarContainer p {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.progessBar {
+  width: 20rem;
+  background-color: #fff;
+}
+
+.progress-bar {
+  background-color: #32de8a !important;
+}
+
+.containerDescription div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #cecece;
+  width: 50rem;
+  height: max-content;
+  border-radius: 2rem;
+}
+.containerDescription {
+  margin-top: 4rem;
+}
+.containerDescription p {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.containerDescription div h3 {
+  font-weight: lighter !important;
+  color: #313131;
+  font-size: 1.5rem;
 }
