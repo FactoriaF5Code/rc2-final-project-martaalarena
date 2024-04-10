@@ -34,9 +34,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 2rem;
 }
 
 .allContainers button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #8eda81;
   font-family: graphik;
   color: #fff;
@@ -47,7 +51,9 @@
   cursor: pointer;
   position: absolute;
   bottom: 9rem;
+ 
 }
+
 
 .containerInfo {
   display: flex;
@@ -61,4 +67,5 @@
 .containerPage button a {
   color: inherit;
   text-decoration: none; 
+  font-size: 1.8rem;
 }
