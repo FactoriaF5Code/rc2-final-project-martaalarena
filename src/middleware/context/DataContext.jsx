@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 import ReviewService from "../../service/ReviewService";
 
 const DataContext = createContext();
@@ -19,23 +19,25 @@ export const DataProvider = ({ children }) => {
     }
   };
 
-  const viewReview = async () => {
-    try {
-      const reviewList = await reviewService.viewReview();
-      setReviewList(reviewList);
-      console.log(reviewList);
-    } catch (error) {
-      console.error("Error fetching review:", error);
-    }
-  };
+  useEffect(() => {
+    const viewReview = async () => {
+      try {
+        const reviewList = await reviewService.viewReview();
+        setReviewList(reviewList);
+        console.log(reviewList);
+      } catch (error) {
+        console.error("Error fetching review:", error);
+      }
+    };
+    viewReview();
+  });
 
   const value = {
     review,
     setReview,
     postReview,
-    viewReview,
-    reviewList
-   
+
+    reviewList,
   };
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
