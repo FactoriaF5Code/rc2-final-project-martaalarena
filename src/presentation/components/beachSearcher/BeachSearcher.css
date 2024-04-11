@@ -1,6 +1,7 @@
 .searcherContainer {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .searcherContainer input {
@@ -18,5 +19,7 @@
 }
 
 .searcherContainer img{
-    width: fit-content;
+  height: 40px;
+  position: relative;
+  right: 60px;
 }

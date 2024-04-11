@@ -30,7 +30,7 @@ export const DataProvider = ({ children }) => {
       }
     };
     viewReview();
-  });
+  },[]);
 
   const value = {
     review,
