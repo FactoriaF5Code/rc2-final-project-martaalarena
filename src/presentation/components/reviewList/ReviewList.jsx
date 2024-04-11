@@ -8,7 +8,6 @@ export default function ReviewList() {
     <section className="containerReviewList">
       {reviewList.map((review, index) => (
         <div key={index}>
-          <hr />
           <div className="imgReviewList">
             <img src={review.urlImg} alt="playa" />
             <div >
@@ -18,6 +17,7 @@ export default function ReviewList() {
               </button>
             </div>
           </div>
+          <hr />
         </div>
       ))}
     </section>

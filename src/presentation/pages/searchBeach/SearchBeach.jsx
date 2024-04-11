@@ -2,7 +2,7 @@ import BeachSearcher from "../../components/beachSearcher/BeachSearcher";
 import Header from "../../components/header/Header";
 import { useState } from "react";
 import ReviewList from "../../components/reviewList/ReviewList";
-import Map from "../../components/map/Map";
+// import Map from "../../components/map/Map";
 
 export default function SearchBeach() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -16,8 +16,7 @@ export default function SearchBeach() {
         <Header />
         <article style={{ paddingTop: '11rem' }}>
           <BeachSearcher onSearch={handleSearch} />
-          <Map />
-          <ReviewList />
+          <ReviewList searchTerm={searchTerm} />
         </article>
       </section>
     </>
