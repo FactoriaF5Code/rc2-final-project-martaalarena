@@ -2,13 +2,14 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 import "./SingleReview.css";
 import { useDataContext } from "../../../middleware/context/DataContext";
 
-export default function SingleReview() {
+export default function SingleReview({id}) {
   const { reviewList } = useDataContext();
 
   console.log("Datos de reviewList:", reviewList);
 
   return (
     <section className="totalContainer">
+    <p>{`pinta solo ${id}`}</p>
       {reviewList.map((review, index) => (
         <article className="totalContainerInfo" key={index}>
           <div className="containerImgName" key={review.id}>

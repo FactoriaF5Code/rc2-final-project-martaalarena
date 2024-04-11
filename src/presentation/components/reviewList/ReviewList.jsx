@@ -14,7 +14,7 @@ export default function ReviewList() {
             <div >
               <h1>{review.name}</h1>
               <button>
-                <Link to="/review">Mas info </Link>
+                <Link to={`/review/${review.id}`}>Mas info </Link>
               </button>
             </div>
           </div>
