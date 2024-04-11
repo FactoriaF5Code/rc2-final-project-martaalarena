@@ -1,3 +1,5 @@
+TRUNCATE reviews;
+
 INSERT INTO reviews (name, url_img, parking, description, amount_of_people, dificulty, wave_cuality, accessibility) VALUES
 ('Playa Norte', 'https://example.com/img/playa-norte.jpg', 100, 'Hermosa playa con olas moderadas, ideal para principiantes y familias.', 50, 2, 3, 4),
 ('Cabo Feroz', 'https://example.com/img/cabo-feroz.jpg', 20, 'Olas grandes y fuertes. Recomendado solo para surfistas experimentados.', 30, 5, 5, 2),

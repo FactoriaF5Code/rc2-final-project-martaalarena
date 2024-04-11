@@ -21,6 +21,9 @@ public class Review {
     Integer dificulty;
     Integer waveCuality;
     Integer accessibility;
+    // Double lat;
+    // Double lng;
+
 
     public Review() {
     }
