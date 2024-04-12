@@ -14,7 +14,7 @@ export default function SearchBeach() {
     <>
       <section style={{ backgroundColor: "#627C85" }}>
         <Header />
-        <article style={{ paddingTop: '11rem' }}>
+        <article style={{ paddingTop: '11rem',  minHeight: '100vh'}}>
           <BeachSearcher onSearch={handleSearch} />
           <ReviewList searchTerm={searchTerm} />
         </article>
