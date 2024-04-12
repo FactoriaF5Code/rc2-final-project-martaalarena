@@ -1,10 +1,21 @@
 import { useDataContext } from "../../../middleware/context/DataContext";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./ReviewList.css";
+import { useState } from "react";
+import { useHistory } from "react";
 
 // eslint-disable-next-line react/prop-types
 export default function ReviewList({ searchTerm }) {
   const { reviewList } = useDataContext();
+  const history = useHistory();
+  const [selectedReview, setSelectedReview] = useState(null);
+
+
+  const handleMoreInfo = (reviewId) => {
+    setSelectedReview(reviewList.find(review => review.id === reviewId));
+    history.push(`/review/${reviewId}`);
+  };
+
   return (
     <section className="containerReviewList">
       {reviewList.map((review, index) => {
@@ -15,8 +26,8 @@ export default function ReviewList({ searchTerm }) {
                 <img src={review.urlImg} alt="playa" />
                 <div>
                   <h1>{review.name}</h1>
-                  <button>
-                    <Link to={`/review/${review.id}`}>Mas info </Link>
+                  <button  onClick={() => handleMoreInfo(review.id)}>
+                    {/* <Link to={`/review/${review.id}`}>Mas info </Link> */}
                   </button>
                 </div>
               </div>
@@ -26,7 +37,7 @@ export default function ReviewList({ searchTerm }) {
         } else {
           return null;
         }
-      })} 
+      })}
     </section>
   );
 }

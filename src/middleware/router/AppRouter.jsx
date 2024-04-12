@@ -12,7 +12,7 @@ export default function AppRouter() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/searchBeach" element={<SearchBeach/>}/>
-            <Route path="/review/:id" element={<Review />} />
+            <Route path="/review" element={<Review />} />
           </Routes>
         </Router>
       </DataProvider>
