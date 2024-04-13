@@ -24,6 +24,18 @@ class ReviewService{
       throw error;
     }
   }
+  
+  async getBeachInfoById(id) {
+    try {
+      const response = await axios.get(`${URL}/${id}`);
+      return response.data;
+    } catch (error) {
+      console.error("Error fetching beach info by ID:", error);
+      throw error;
+    }
+  }
+  
+  
 
 }
 
