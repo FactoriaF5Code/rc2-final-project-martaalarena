@@ -16,7 +16,7 @@ export default function Header() {
             <li><Link to={"/"}>HOME</Link></li>
             <li><Link to={"/searchBeach"}>REVIEWS</Link></li>
             <li><Link to={"/searchBeach"}>SURF FORECAST</Link></li>
-            <li><Link to={"/searchBeach"}>MY REVIEWS</Link></li>
+            <li><Link to={"/myReviews"}>MY REVIEWS</Link></li>
           </ul>
         </section>
       </article>
