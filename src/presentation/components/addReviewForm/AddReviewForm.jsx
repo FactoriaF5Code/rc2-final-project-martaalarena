@@ -20,7 +20,7 @@ export default function AddReviewForm() {
   };
   
   const [formData, setFormData] = useState(initialFormData);
-  
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -59,6 +59,7 @@ export default function AddReviewForm() {
               onChange={handleChange}
             />
           </div>
+          
           <h2>Del 10 al 100 rellena estos campos de menos a más</h2>
           <h3>Por ejemplo hay demasiada gente en la playa: 80 </h3>
           <article>
@@ -66,7 +67,7 @@ export default function AddReviewForm() {
               <p>Cantidad de gente</p>
               <Form.Select
                 size="sm"
-                value={formData.amount_of_people}
+                value={formData.amountOfPeople}
                 style={{
                   width: "6vw",
                   fontSize: "3rem",
@@ -141,7 +142,7 @@ export default function AddReviewForm() {
               <p>Calidad de ola</p>
               <Form.Select
                 size="sm"
-                value={formData.wave_cuality}
+                value={formData.waveCuality}
                 style={{
                   width: "6vw",
                   fontSize: "3rem",

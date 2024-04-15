@@ -43,7 +43,7 @@ export const DataProvider = ({ children }) => {
     };
 
     fetchData();
-  }, []);
+  }, [review]);
 
   const value = {
     review,
