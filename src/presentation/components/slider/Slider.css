@@ -1,7 +1,3 @@
-@font-face {
-  font-family: "graphik";
-  src: url("../../assets/GRAPHIK-BOLD-TRIAL.OTF") format("truetype");
-}
 .sliderContainer {
   width: 100%;
   height: 100vh;
@@ -12,8 +8,7 @@
   font-size: 3vw;
   z-index: 62;
   text-align: center;
-  color: rgba(34, 34, 34, 0.9);
-  font-family: "graphik";
+  color: rgba(34, 34, 34, 0.8);
 }
 
 .relative {

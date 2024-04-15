@@ -1,8 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 // import Carousel from "react-bootstrap/Carousel";
-import portadaSlider from "../../assets/imgSlider1.jpg";
-import secondSlider from "../../assets/imgSlider2.jpg";
-import thirdSlider from "../../assets/imgSlider3.jpg";
+import portadaSlider from "../../assets/slider2.jpg";
+import secondSlider from "../../assets/playaAsturias.jpg";
+import thirdSlider from "../../assets/surfSalinas.jpg";
 import "./Slider.css";
 
 import "swiper/css";

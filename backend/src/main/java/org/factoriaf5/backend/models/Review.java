@@ -21,15 +21,15 @@ public class Review {
     Integer dificulty;
     Integer waveCuality;
     Integer accessibility;
+    String location;
     // Double lat;
     // Double lng;
-
 
     public Review() {
     }
 
     public Review(Integer id, String name, String urlImg, Integer parking, String description, Integer amountOfPeople,
-            Integer dificulty, Integer waveCuality, Integer accessibility) {
+            Integer dificulty, Integer waveCuality, Integer accessibility, String location) {
         this.id = id;
         this.name = name;
         this.urlImg = urlImg;
@@ -39,6 +39,7 @@ public class Review {
         this.dificulty = dificulty;
         this.waveCuality = waveCuality;
         this.accessibility = accessibility;
+        this.location = location;
     }
 
     public Integer getId() {
@@ -111,5 +112,13 @@ public class Review {
 
     public void setAccessibility(Integer accessibility) {
         this.accessibility = accessibility;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 }
