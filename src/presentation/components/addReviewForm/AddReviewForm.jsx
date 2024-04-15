@@ -1,25 +1,26 @@
 import Form from "react-bootstrap/Form";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./FormReview.css";
+import "./AddReviewForm.css";
 import SaveReviewButton from "../saveReviewButton/SaveReviewButton";
 import { useDataContext } from "../../../middleware/context/DataContext";
 import { useState } from "react";
 
-export default function FormReview() {
+export default function AddReviewForm() {
   const { postReview } = useDataContext();
-  const [formData, setFormData] = useState(initialFormData);
-
+  
   const initialFormData = {
     name: "",
-    url_img: "",
+    urlImg: "",
     parking: "",
     description: "",
-    amount_of_people: "",
+    amountOfPeople: "",
     dificulty: "",
-    wave_cuality: "",
+    waveCuality: "",
     accessibility: "",
   };
-
+  
+  const [formData, setFormData] = useState(initialFormData);
+  
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -31,6 +32,7 @@ export default function FormReview() {
     e.preventDefault();
     postReview(formData);
     setFormData(initialFormData);
+    alert("publicación realizada con éxito")
   };
 
   return (
@@ -52,8 +54,9 @@ export default function FormReview() {
             <input
               type="text"
               name="url"
-              value={formData.url_img}
-              placeholder="http://imgfz.com/i/ng2kJVm.jpeg"
+              value={formData.urlImg}
+              placeholder="http://..."
+              onChange={handleChange}
             />
           </div>
           <h2>Del 10 al 100 rellena estos campos de menos a más</h2>
@@ -186,7 +189,7 @@ export default function FormReview() {
             </div>
           </article>
           <div>
-            <label htmlFor="url">Descripción</label>
+            <label htmlFor="description">Descripción</label>
             <input
               type="text"
               name="description"

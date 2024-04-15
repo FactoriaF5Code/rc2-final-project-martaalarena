@@ -21,7 +21,7 @@ export default function ReviewList({ searchTerm }) {
                 <div>
                   <h1>{review.name}</h1>
                   <button onClick={() => handleViewMoreInfo(review.id)}>
-                    <Link to={`/review/${review.id}`}>Mas info </Link>
+                    <Link to={`/review/${review.id}`}>Más info </Link>
                   </button>
                 </div>
               </div>

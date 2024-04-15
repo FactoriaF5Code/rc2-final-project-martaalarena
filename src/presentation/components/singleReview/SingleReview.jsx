@@ -1,10 +1,28 @@
 import ProgressBar from "react-bootstrap/ProgressBar";
 import "./SingleReview.css";
 import { useDataContext } from "../../../middleware/context/DataContext";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function SingleReview() {
-  const {  selectedBeachInfo } = useDataContext();
+  const { selectedBeachInfo, getBeachInfoById } = useDataContext();
 
+  const { id } = useParams();
+
+  useEffect(() => {
+    const fetchBeach = async () => {
+      try {
+        await getBeachInfoById(id);
+      } catch (error) {
+        console.error("Error fetching post:", error);
+      }
+    };
+    fetchBeach();
+  }, [id]);
+
+  if (!selectedBeachInfo) {
+    return null;
+  }
 
   return (
     <section className="totalContainer">
@@ -25,7 +43,10 @@ export default function SingleReview() {
               </div>
               <div>
                 <p>Aparcamiento</p>
-                <ProgressBar className="progessBar" now={selectedBeachInfo.parking} />
+                <ProgressBar
+                  className="progessBar"
+                  now={selectedBeachInfo.parking}
+                />
               </div>
               <div>
                 <p>Dificultad</p>
@@ -61,4 +82,3 @@ export default function SingleReview() {
     </section>
   );
 }
-

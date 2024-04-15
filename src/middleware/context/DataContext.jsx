@@ -21,33 +21,37 @@ export const DataProvider = ({ children }) => {
     }
   };
 
+  const getBeachInfoById = async (id) => {
+    try {
+      const beachInfo = await reviewService.getBeachInfoById(id);
+      setSelectedBeachInfo(beachInfo);
+      console.log(beachInfo);
+    } catch (error) {
+      console.error("Error fetching data by id:", error);
+    }
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const reviewList = await reviewService.viewReview();
         setReviewList(reviewList);
         console.log(reviewList);
-  
-        // Aquí debes establecer el ID de la reseña que deseas obtener
-        const beachId = '603'; // Reemplaza 'ID_DE_LA_RESEÑA' con el ID real
-        const beachInfo = await reviewService.getBeachInfoById(beachId);
-        setSelectedBeachInfo(beachInfo);
-        console.log(beachInfo);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
-  
+
     fetchData();
-  }, []); 
+  }, []);
 
   const value = {
     review,
     setReview,
     postReview,
     reviewList,
-  
     selectedBeachInfo,
+    getBeachInfoById,
   };
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
