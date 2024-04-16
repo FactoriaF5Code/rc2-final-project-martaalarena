@@ -21,7 +21,27 @@
 .containerImgName h1 {
   text-transform: uppercase;
   color: #fff;
+  height: max-content;
 }
+
+.containerNameLocation {
+  display: flex;
+  flex-direction: column;
+}
+
+.locationContainer {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  height: max-content;
+}
+
+.locationContainer p {
+  font-size: 2rem;
+  color: #b8b4b4;
+  margin: 0;
+}
+
 .progressBarContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

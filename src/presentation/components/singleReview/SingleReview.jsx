@@ -3,6 +3,7 @@ import "./SingleReview.css";
 import { useDataContext } from "../../../middleware/context/DataContext";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
+import locationIcon from "../../assets/Location.png";
 
 export default function SingleReview() {
   const { selectedBeachInfo, getBeachInfoById } = useDataContext();
@@ -30,7 +31,13 @@ export default function SingleReview() {
         <article className="totalContainerInfo">
           <div className="containerImgName">
             <img src={selectedBeachInfo.urlImg} alt="Playa" />
-            <h1>{selectedBeachInfo.name}</h1>
+            <div className="containerNameLocation">
+              <h1>{selectedBeachInfo.name}</h1>
+              <div className="locationContainer">
+                <img src={locationIcon} alt="location icon" />
+                <p>{selectedBeachInfo.location}</p>
+              </div>
+            </div>
           </div>
           <div>
             <article className="progressBarContainer">
