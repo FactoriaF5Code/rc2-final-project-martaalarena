@@ -22,14 +22,16 @@ public class Review {
     Integer waveCuality;
     Integer accessibility;
     String location;
+    Integer valoration;
     // Double lat;
     // Double lng;
 
+    
     public Review() {
     }
 
     public Review(Integer id, String name, String urlImg, Integer parking, String description, Integer amountOfPeople,
-            Integer dificulty, Integer waveCuality, Integer accessibility, String location) {
+            Integer dificulty, Integer waveCuality, Integer accessibility, String location, Integer valoration) {
         this.id = id;
         this.name = name;
         this.urlImg = urlImg;
@@ -40,6 +42,7 @@ public class Review {
         this.waveCuality = waveCuality;
         this.accessibility = accessibility;
         this.location = location;
+        this.valoration = valoration;
     }
 
     public Integer getId() {
@@ -120,5 +123,12 @@ public class Review {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+    public Integer getValoration() {
+        return valoration;
+    }
+    
+    public void setValoration(Integer valoration) {
+        this.valoration = valoration;
     }
 }

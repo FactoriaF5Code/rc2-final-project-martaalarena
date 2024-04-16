@@ -7,10 +7,12 @@ import { useState } from "react";
 
 export default function AddReviewForm() {
   const { postReview } = useDataContext();
-  
+
   const initialFormData = {
     name: "",
     urlImg: "",
+    location: "",
+    valoration: "",
     parking: "",
     description: "",
     amountOfPeople: "",
@@ -18,7 +20,7 @@ export default function AddReviewForm() {
     waveCuality: "",
     accessibility: "",
   };
-  
+
   const [formData, setFormData] = useState(initialFormData);
 
   const handleChange = (e) => {
@@ -32,13 +34,13 @@ export default function AddReviewForm() {
     e.preventDefault();
     postReview(formData);
     setFormData(initialFormData);
-    alert("publicación realizada con éxito")
+    alert("publicación realizada con éxito");
   };
 
   return (
     <>
       <main className="containerAddReviewForm">
-        <form action="">
+        <form>
           <div>
             <label htmlFor="name">Nombre</label>
             <input
@@ -53,19 +55,51 @@ export default function AddReviewForm() {
             <label htmlFor="url">Url imagen</label>
             <input
               type="text"
-              name="url"
+              name="urlImg"
               value={formData.urlImg}
               placeholder="http://..."
               onChange={handleChange}
             />
           </div>
-          
+          <div>
+            <label htmlFor="location">Ubicación</label>
+            <input
+              type="text"
+              name="location"
+              value={formData.location}
+              placeholder="Calle..."
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <p>Número de estrellas</p>
+            <Form.Select
+              name="valoration"
+              size="sm"
+              value={formData.valoration}
+              style={{
+                width: "6vw",
+                fontSize: "3rem",
+                borderRadius: "1rem",
+                color: "#A1A1A1",
+              }}
+              onChange={handleChange}
+            >
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </Form.Select>
+          </div>
+
           <h2>Del 10 al 100 rellena estos campos de menos a más</h2>
           <h3>Por ejemplo hay demasiada gente en la playa: 80 </h3>
           <article>
             <div>
               <p>Cantidad de gente</p>
               <Form.Select
+                name="amountOfPeople"
                 size="sm"
                 value={formData.amountOfPeople}
                 style={{
@@ -76,21 +110,22 @@ export default function AddReviewForm() {
                 }}
                 onChange={handleChange}
               >
-                <option>10</option>
-                <option>20</option>
-                <option>30</option>
-                <option>40</option>
-                <option>50</option>
-                <option>60</option>
-                <option>70</option>
-                <option>80</option>
-                <option>90</option>
-                <option>100</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+                <option value="60">60</option>
+                <option value="70">70</option>
+                <option value="80">80</option>
+                <option value="90">90</option>
+                <option value="100">100</option>
               </Form.Select>
             </div>
             <div>
               <p>Aparcamiento</p>
               <Form.Select
+                name="parking"
                 size="sm"
                 value={formData.parking}
                 style={{
@@ -101,21 +136,22 @@ export default function AddReviewForm() {
                 }}
                 onChange={handleChange}
               >
-                <option>10</option>
-                <option>20</option>
-                <option>30</option>
-                <option>40</option>
-                <option>50</option>
-                <option>60</option>
-                <option>70</option>
-                <option>80</option>
-                <option>90</option>
-                <option>100</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+                <option value="60">60</option>
+                <option value="70">70</option>
+                <option value="80">80</option>
+                <option value="90">90</option>
+                <option value="100">100</option>
               </Form.Select>
             </div>
             <div>
               <p>Dificultad</p>
               <Form.Select
+                name="dificulty"
                 size="sm"
                 value={formData.dificulty}
                 style={{
@@ -126,21 +162,22 @@ export default function AddReviewForm() {
                 }}
                 onChange={handleChange}
               >
-                <option>10</option>
-                <option>20</option>
-                <option>30</option>
-                <option>40</option>
-                <option>50</option>
-                <option>60</option>
-                <option>70</option>
-                <option>80</option>
-                <option>90</option>
-                <option>100</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+                <option value="60">60</option>
+                <option value="70">70</option>
+                <option value="80">80</option>
+                <option value="90">90</option>
+                <option value="100">100</option>
               </Form.Select>
             </div>
             <div>
               <p>Calidad de ola</p>
               <Form.Select
+                name="waveCuality"
                 size="sm"
                 value={formData.waveCuality}
                 style={{
@@ -151,21 +188,22 @@ export default function AddReviewForm() {
                 }}
                 onChange={handleChange}
               >
-                <option>10</option>
-                <option>20</option>
-                <option>30</option>
-                <option>40</option>
-                <option>50</option>
-                <option>60</option>
-                <option>70</option>
-                <option>80</option>
-                <option>90</option>
-                <option>100</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+                <option value="60">60</option>
+                <option value="70">70</option>
+                <option value="80">80</option>
+                <option value="90">90</option>
+                <option value="100">100</option>
               </Form.Select>
             </div>
             <div>
               <p>Accesibilidad</p>
               <Form.Select
+                name="accessibility"
                 size="sm"
                 value={formData.accessibility}
                 style={{
@@ -176,16 +214,16 @@ export default function AddReviewForm() {
                 }}
                 onChange={handleChange}
               >
-                <option>10</option>
-                <option>20</option>
-                <option>30</option>
-                <option>40</option>
-                <option>50</option>
-                <option>60</option>
-                <option>70</option>
-                <option>80</option>
-                <option>90</option>
-                <option>100</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+                <option value="60">60</option>
+                <option value="70">70</option>
+                <option value="80">80</option>
+                <option value="90">90</option>
+                <option value="100">100</option>
               </Form.Select>
             </div>
           </article>
@@ -200,7 +238,7 @@ export default function AddReviewForm() {
             />
           </div>
         </form>
-        <SaveReviewButton handleReview={handleReview}/>
+        <SaveReviewButton handleReview={handleReview} />
       </main>
     </>
   );

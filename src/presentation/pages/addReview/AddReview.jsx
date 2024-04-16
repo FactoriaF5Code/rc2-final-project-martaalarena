@@ -9,7 +9,10 @@ export default function AddReview() {
     <>
       <section style={{ backgroundColor: "#627C85", height: "100vh" }}>
         <Header />
-        <article style={{ paddingTop: "13vh", minHeight: "100vh" }}>
+        <article
+          className="buttonAddReviewContainer"
+          style={{ paddingTop: "13vh", minHeight: "100vh" }}
+        >
           <Link to="/writeReview">
             <button className="addReviewButton">
               <img src={plusMath} alt="mas" />

@@ -51,7 +51,7 @@ export const DataProvider = ({ children }) => {
     postReview,
     reviewList,
     selectedBeachInfo,
-    getBeachInfoById,
+    getBeachInfoById
   };
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;

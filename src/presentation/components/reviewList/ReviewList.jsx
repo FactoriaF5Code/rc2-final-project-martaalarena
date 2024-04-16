@@ -23,7 +23,7 @@ export default function ReviewList({ searchTerm }) {
                 <div>
                   <h1>{review.name}</h1>
                   <Stack spacing={1}>
-                    <Rating style={{ fontSize: '8rem' }} name="size-" defaultValue={2} size="large" readOnly/>
+                    <Rating style={{ fontSize: '8rem' }} name="size-" defaultValue={review.valoration} size="large" readOnly/>
                   </Stack>
                   <button onClick={() => handleViewMoreInfo(review.id)}>
                     <Link to={`/review/${review.id}`}>Más info </Link>
