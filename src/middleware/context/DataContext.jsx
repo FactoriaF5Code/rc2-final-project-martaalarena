@@ -7,6 +7,7 @@ const DataContext = createContext();
 export const DataProvider = ({ children }) => {
   const [review, setReview] = useState("");
   const [reviewList, setReviewList] = useState([]);
+  const [myReviews, setMyReviews] = useState([]);
   const [selectedBeachInfo, setSelectedBeachInfo] = useState(null);
 
   const reviewService = new ReviewService();
@@ -51,7 +52,9 @@ export const DataProvider = ({ children }) => {
     postReview,
     reviewList,
     selectedBeachInfo,
-    getBeachInfoById
+    getBeachInfoById,
+    setMyReviews,
+    myReviews,
   };
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;

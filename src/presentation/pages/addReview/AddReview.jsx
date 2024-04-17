@@ -3,6 +3,7 @@ import plusMath from "../../assets/plusMath.png";
 import { Link } from "react-router-dom";
 
 import "./AddReview.css";
+import MyReviews from "../../components/myReviews/MyReviews";
 
 export default function AddReview() {
   return (
@@ -11,8 +12,9 @@ export default function AddReview() {
         <Header />
         <article
           className="buttonAddReviewContainer"
-          style={{ paddingTop: "13vh", minHeight: "100vh" }}
+          style={{ paddingTop: "13vh", minHeight: "100vh", display: "flex", flexDirection: "column"}}
         >
+          <MyReviews/>
           <Link to="/writeReview">
             <button className="addReviewButton">
               <img src={plusMath} alt="mas" />

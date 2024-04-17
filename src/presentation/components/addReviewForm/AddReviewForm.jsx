@@ -6,7 +6,7 @@ import { useDataContext } from "../../../middleware/context/DataContext";
 import { useState } from "react";
 
 export default function AddReviewForm() {
-  const { postReview } = useDataContext();
+  const { postReview, myReviews, setMyReviews } = useDataContext();
 
   const initialFormData = {
     name: "",
@@ -32,8 +32,25 @@ export default function AddReviewForm() {
 
   const handleReview = (e) => {
     e.preventDefault();
-    postReview(formData);
+    const formDataNew = { ...formData, isNew: true }
+    postReview(formDataNew);
     setFormData(initialFormData);
+    setMyReviews([
+      ...myReviews,
+      {
+        name: formData.name,
+        urlImg: formData.urlImg,
+        location: formData.location,
+        valoration: formData.valoration,
+        parking: formData.parking,
+        description: formData.description,
+        amountOfPeople: formData.amountOfPeople,
+        dificulty: formData.dificulty,
+        waveCuality: formData.waveCuality,
+        accessibility: formData.accessibility,
+        isNew: true,
+      },
+    ])
     alert("publicación realizada con éxito");
   };
 
