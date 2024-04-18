@@ -1,0 +1,33 @@
+.containerAddReviewForm {
+    margin-left: 5vw;
+}
+
+
+.containerAddReviewForm label {
+  font-size: 1.5vw;
+}
+
+.containerAddReviewForm input {
+  font-size: 2vw;
+  background-color: #d9d9d9;
+  border-radius: 0.5vw;
+  width: 40vw;
+}
+
+.containerAddReviewForm p {
+  font-size: 1.5vw;
+}
+
+.containerAddReviewForm article {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.containerAddReviewForm div {
+    display: flex;
+    flex-direction: column;
+}
+
+.containerAddReviewForm h2 {
+    margin-top: 3vh;
+}

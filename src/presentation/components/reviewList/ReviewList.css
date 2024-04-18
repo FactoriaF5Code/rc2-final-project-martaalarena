@@ -1,0 +1,41 @@
+.containerReviewList {
+  padding: 0 3rem;
+}
+
+.containerReviewList img {
+  width: 50rem;
+  border-radius: 2rem;
+}
+
+.containerReviewList a {
+  font-size: 3rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.imgReviewList {
+  display: flex;
+  justify-content: space-around;
+  gap: 3rem;
+  
+  padding: 3rem;
+}
+
+.imgReviewList div {
+    display: flex;
+    flex-direction: column;
+    gap:6rem;
+  align-items:center ;
+}
+
+.imgReviewList h1 {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.containerReviewList button {
+  background-color: #8eda81;
+  border-radius: 1rem;
+  width: 40rem;
+  height: 6rem;
+}

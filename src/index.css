@@ -1,0 +1,16 @@
+/* @font-face {
+  font-family: "graphik";
+  src: url("../../assets/GRAPHIK-BOLD-TRIAL.OTF") format("truetype");
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 62.5%;
+  list-style-type: none;
+  font-weight: bold;
+}

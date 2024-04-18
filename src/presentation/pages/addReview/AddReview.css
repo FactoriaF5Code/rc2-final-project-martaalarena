@@ -1,0 +1,27 @@
+.addReviewButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8EDA81;
+    border-radius: 0.5vw;
+    padding: 1vw;
+    gap: 1vw;
+
+}
+
+.addReviewButton h1 {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.buttonAddReviewContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonAddReviewContainer a {
+    text-decoration: none;
+}
