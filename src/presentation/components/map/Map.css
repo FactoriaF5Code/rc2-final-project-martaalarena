@@ -1,0 +1,8 @@
+.containerMap {
+    display: flex;
+    justify-content: center;
+}
+
+.containerMap img{
+width: 120rem;
+}

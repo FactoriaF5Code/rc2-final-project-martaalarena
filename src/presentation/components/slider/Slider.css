@@ -1,0 +1,28 @@
+.sliderContainer {
+  width: 100%;
+  height: 100vh;
+}
+
+.sliderTitle {
+  position: absolute;
+  font-size: 3vw;
+  z-index: 62;
+  text-align: center;
+  color: rgba(34, 34, 34, 0.8);
+}
+
+.relative {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.relative img {
+  width: 100%;
+  height: 100vh;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #f3d743 !important;
+}

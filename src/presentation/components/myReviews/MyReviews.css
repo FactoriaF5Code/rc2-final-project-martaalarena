@@ -1,0 +1,24 @@
+.myReview img {
+  width: 50rem;
+  border-radius: 2rem;
+}
+
+.myReview {
+  display: flex;
+  justify-content: space-around;
+  gap: 3rem;
+  
+  padding: 3rem;
+}
+
+.myReview div {
+    display: flex;
+    flex-direction: column;
+    gap:6rem;
+  align-items:center ;
+}
+
+.myReview h1 {
+  text-transform: uppercase;
+  color: #fff;
+}
