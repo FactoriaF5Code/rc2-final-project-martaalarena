@@ -63,6 +63,7 @@ export default function AddReviewForm() {
             <input
               type="text"
               name="name"
+              id="name"
               value={formData.name}
               placeholder="Playa de los Quebrantos"
               onChange={handleChange}
