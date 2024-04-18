@@ -1,4 +1,5 @@
 import logo from "../../assets/rip_current_logo.png";
+import log_out from "../../assets/log-out.png";
 import textLogo from "../../assets/RIP CURRENT.png";
 import "./Header.css";
 import { Link } from "react-router-dom";
@@ -15,8 +16,10 @@ export default function Header() {
           <ul>
             <li><Link to={"/home"}>HOME</Link></li>
             <li><Link to={"/searchBeach"}>REVIEWS</Link></li>
-            {/* <li><Link to={"/searchBeach"}>SURF FORECAST</Link></li> */}
             <li><Link to={"/myReviews"}>MY REVIEWS</Link></li>
+            <Link to={"/"}>
+            <img src={log_out} alt="log out" />
+            </Link>
           </ul>
         </section>
       </article>

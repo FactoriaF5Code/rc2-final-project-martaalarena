@@ -33,9 +33,28 @@
   color: #fff;
 }
 
+.imgReviewList p {
+  color: #b8b4b4;
+  font-size: 1vw;
+ margin-bottom: 0;
+}
+
 .containerReviewList button {
   background-color: #8eda81;
   border-radius: 1rem;
   width: 40rem;
   height: 6rem;
+}
+
+.containerLocationReviewList {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center;
+  gap: 1rem !important;
+  margin-top: -5rem;
+}
+
+.containerLocationReviewList img {
+  width: 2rem;
 }
